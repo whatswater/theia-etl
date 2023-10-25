@@ -48,7 +48,7 @@ export class FrontendGenerator extends AbstractGenerator {
 
     protected compileIndexHtml(frontendModules: Map<string, string>): string {
         return `<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>${this.compileIndexHead(frontendModules)}
 </head>
@@ -111,8 +111,8 @@ ${Array.from(frontendPreloadModules.values(), jsModulePath => `\
 
 module.exports = (async () => {
     const { messagingFrontendModule } = require('@theia/core/lib/${this.pck.isBrowser()
-            ? 'browser/messaging/messaging-frontend-module'
-            : 'electron-browser/messaging/electron-messaging-frontend-module'}');
+                ? 'browser/messaging/messaging-frontend-module'
+                : 'electron-browser/messaging/electron-messaging-frontend-module'}');
     const container = new Container();
     container.load(messagingFrontendModule);
     await preload(container);

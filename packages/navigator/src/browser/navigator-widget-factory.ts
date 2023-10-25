@@ -30,7 +30,7 @@ export const EXPLORER_VIEW_CONTAINER_ID = 'explorer-view-container';
 export const EXPLORER_VIEW_CONTAINER_TITLE_OPTIONS: ViewContainerTitleOptions = {
     label: nls.localizeByDefault('Explorer'),
     iconClass: codicon('files'),
-    closeable: true
+    closeable: false
 };
 
 @injectable()

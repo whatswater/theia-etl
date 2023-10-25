@@ -120,10 +120,14 @@
     },
     {
       "name": "Launch Browser Frontend",
-      "type": "chrome",
+      "type": "msedge",
       "request": "launch",
       "url": "http://localhost:3000/",
-      "webRoot": "${workspaceFolder}/examples/browser"
+      "webRoot": "${workspaceFolder}/examples/browser",
+      "runtimeArgs": [
+        "--user-data-dir=D:\\code\\edge_data",
+        "--disable-features=msUndersideButton"
+      ]
     },
     {
       "type": "chrome",
